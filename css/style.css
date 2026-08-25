@@ -126,6 +126,12 @@ main {
   font-weight: var(--fw-extra-bold);
   margin-bottom: var(--space-l);
   line-height: 1.5;
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.blog__title:hover {
+  color: var(--clr-primary);
 }
 
 .blog__description {
