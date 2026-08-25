@@ -1,0 +1,155 @@
+/* 
+************************
+Custom Properties
+************************
+*/
+
+:root {
+  /* Fonts */
+  --ff-primary: "Figtree", sans-serif;
+
+  --fz-heading: 1.5rem;
+  --fz-body: 1rem;
+  --fz-sm: 0.875rem;
+
+  --fw-default: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
+
+  /* Colors */
+  --clr-primary: hsl(47, 88%, 63%);
+  --clr-gray-900: hsl(0, 0%, 7%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Border radius */
+  --br-card: 20px;
+  --br-medium: 10px;
+  --br-small: 4px;
+
+  /* Box shadows */
+  --bs-default: 0 10px 20px hsla(217, 45%, 22%, 0.1);
+
+  /* Spacing */
+
+  --space-x: 1.5rem; /* 24px */
+  --space-l: 0.75rem; /* 12px */
+  --space-m: 0.5rem; /* 8px */
+  --space-s: 0.25rem; /* 4px */
+}
+
+/* 
+************************
+Global Reset
+************************
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fz-body);
+  font-weight: var(--fw-default);
+  line-height: 1;
+  color: var(--clr-gray-900);
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--clr-primary);
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* 
+************************
+Card Styles
+************************
+*/
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.blog {
+  width: min(24rem, 100% - var(--space-l));
+  padding: clamp(var(--space-m), 3vw, var(--space-x));
+  border: 1px solid var(--clr-gray-900);
+  border-radius: var(--br-card);
+  background-color: var(--clr-white);
+  box-shadow: var(--space-m) var(--space-m) 0 var(--clr-gray-900);
+}
+
+.blog__img {
+  margin-bottom: var(--space-x);
+}
+
+.blog__img img {
+  width: 100%;
+  border-radius: var(--br-medium);
+}
+
+.blog__category {
+  display: inline-block;
+  font-size: var(--fz-sm);
+  padding: var(--space-m) var(--space-l);
+  font-weight: var(--fw-extra-bold);
+  background-color: var(--clr-primary);
+  border-radius: var(--br-small);
+  margin-bottom: var(--space-l);
+}
+
+.blog__date {
+  margin-bottom: var(--space-l);
+}
+
+.blog__title {
+  font-size: var(--fz-heading);
+  font-weight: var(--fw-extra-bold);
+  margin-bottom: var(--space-l);
+  line-height: 1.5;
+}
+
+.blog__description {
+  color: var(--clr-gray-500);
+  font-size: var(--fz-body);
+  line-height: 1.5;
+  margin-bottom: var(--space-x);
+}
+
+.blog__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-l);
+}
+
+.blog__author-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.blog__author-name {
+  font-size: var(--fz-sm);
+  font-weight: var(--fw-extra-bold);
+  text-transform: capitalize;
+  font-style: normal;
+}
